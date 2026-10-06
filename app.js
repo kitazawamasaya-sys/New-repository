@@ -28,8 +28,8 @@ const blockData = [
             { place: "左3軒 右の家",   newspaper1: 1, newspaper2: 1, note: "" },
             { place: "左3軒 奥の家",   newspaper1: 1, newspaper2: 0, note: "" },
             { place: "左3軒 手前の家", newspaper1: 1, newspaper2: 0, note: "" },
-            { place: "左鬼バック",     newspaper1: 1, newspaper2: 0, note: "" },
-            { place: "左",             newspaper1: 1, newspaper2: 0, note: "" },
+            { place: "左鬼バック",     newspaper1: 1, newspaper2: 1, note: "" },
+            { place: "左",             newspaper1: 1, newspaper2: 1, note: "" },
             { place: "右 猫",          newspaper1: 1, newspaper2: 0, note: "" }
         ]
     },
