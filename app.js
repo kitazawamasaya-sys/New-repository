@@ -2,8 +2,8 @@
 // 新聞名
 // ==============================
 
-const newspaper1 = "新聞①";
-const newspaper2 = "新聞②";
+const newspaper1 = "信毎";
+const newspaper2 = "須坂";
 
 
 // ==============================
