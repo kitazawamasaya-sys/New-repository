@@ -16,20 +16,18 @@ const newspaper2 = "須坂";
 //   note       : 備考（その他の新聞など、自由入力。なければ ""）
 //                例: "●●新聞と□□新聞"
 //
-// deliveries が無いブロックは「未入力」と表示されます
+// インデックスの軒数・信毎・須坂は、deliveries から自動計算します。
+// 配達先を入れていないブロックは [] のままにしてください（0 と表示されます）。
 // ==============================
 
 const blockData = [
     {
         block: "A",
-        houses: 7,
-        newspaper1: 7,
-        newspaper2: 3,
         deliveries: [
-            { place: "右の家",         newspaper1: 1, newspaper2: 1, note: "" },
+            { place: "右の家",         newspaper1: 1, newspaper2: 0, note: "" },
             { place: "左3軒 右の家",   newspaper1: 1, newspaper2: 1, note: "" },
-            { place: "左3軒 奥の家",   newspaper1: 0, newspaper2: 1, note: "" },
-            { place: "左3軒 手前の家", newspaper1: 1, newspaper2: 2, note: "" },
+            { place: "左3軒 奥の家",   newspaper1: 1, newspaper2: 0, note: "" },
+            { place: "左3軒 手前の家", newspaper1: 1, newspaper2: 0, note: "" },
             { place: "左鬼バック",     newspaper1: 1, newspaper2: 0, note: "" },
             { place: "左",             newspaper1: 1, newspaper2: 0, note: "" },
             { place: "右 猫",          newspaper1: 1, newspaper2: 0, note: "" }
@@ -37,63 +35,63 @@ const blockData = [
     },
     {
         block: "B",
-        houses: 8,
-        newspaper1: 8,
-        newspaper2: 1
+        deliveries: [
+            { place: "キティ",          newspaper1: 1, newspaper2: 0, note: "" },
+        ]
     },
     {
         block: "C",
-        houses: 6,
-        newspaper1: 6,
-        newspaper2: 4
+        deliveries: [
+            { place: "右 猫",          newspaper1: 1, newspaper2: 0, note: "" }
+        ]
     },
     {
         block: "D",
-        houses: 5,
-        newspaper1: 5,
-        newspaper2: 5
+        deliveries: [
+            { place: "右 猫",          newspaper1: 1, newspaper2: 0, note: "" }
+        ]
     },
     {
         block: "E",
-        houses: 6,
-        newspaper1: 5,
-        newspaper2: 1
+        deliveries: [
+            { place: "右 猫",          newspaper1: 1, newspaper2: 0, note: "" }
+        ]
     },
     {
         block: "F",
-        houses: 6,
-        newspaper1: 3,
-        newspaper2: 1
+        deliveries: [
+            { place: "右 猫",          newspaper1: 1, newspaper2: 0, note: "" }
+        ]
     },
     {
         block: "G",
-        houses: 5,
-        newspaper1: 5,
-        newspaper2: 4
+        deliveries: [
+            { place: "右 猫",          newspaper1: 1, newspaper2: 0, note: "" }
+        ]
     },
     {
         block: "H",
-        houses: 4,
-        newspaper1: 4,
-        newspaper2: 3
+        deliveries: [
+            { place: "右 猫",          newspaper1: 1, newspaper2: 0, note: "" }
+        ]
     },
     {
         block: "I",
-        houses: 4,
-        newspaper1: 14,
-        newspaper2: 4
+        deliveries: [
+            { place: "右 猫",          newspaper1: 1, newspaper2: 0, note: "" }
+        ]
     },
     {
         block: "J",
-        houses: 3,
-        newspaper1: 3,
-        newspaper2: 2
+        deliveries: [
+            { place: "右 猫",          newspaper1: 1, newspaper2: 0, note: "" }
+        ]
     },
     {
         block: "K",
-        houses: 4,
-        newspaper1: 4,
-        newspaper2: 1
+        deliveries: [
+            { place: "右 猫",          newspaper1: 1, newspaper2: 0, note: "" }
+        ]
     }
 ];
 
@@ -111,6 +109,15 @@ function el(tag, className, text) {
     if (className) element.className = className;
     if (text !== undefined) element.textContent = text;
     return element;
+}
+
+// ブロックの軒数・部数を deliveries から計算する
+function getTotals(data) {
+    return {
+        houses: data.deliveries.length,
+        newspaper1: data.deliveries.reduce((sum, d) => sum + d.newspaper1, 0),
+        newspaper2: data.deliveries.reduce((sum, d) => sum + d.newspaper2, 0)
+    };
 }
 
 // 画面を移動する（"" ならインデックス、"A" ならAブロック）
@@ -135,13 +142,14 @@ const blockList = document.getElementById("block-list");
 
 blockData.forEach(data => {
 
+    const totals = getTotals(data);
     const row = document.createElement("tr");
 
     row.innerHTML = `
         <td>${data.block}</td>
-        <td>${data.houses}</td>
-        <td>${data.newspaper1}</td>
-        <td>${data.newspaper2}</td>
+        <td>${totals.houses}</td>
+        <td>${totals.newspaper1}</td>
+        <td>${totals.newspaper2}</td>
     `;
 
     blockList.appendChild(row);
@@ -201,7 +209,7 @@ function showBlock(index) {
     const table = el("table", "detail-table");
     const tbody = el("tbody");
 
-    if (data.deliveries && data.deliveries.length > 0) {
+    if (data.deliveries.length > 0) {
 
         data.deliveries.forEach(d => {
             const row = el("tr");
