@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="theme-color" content="#000000">
+
     <title>新聞配達</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,34 +16,29 @@
 
     <main class="app">
 
-        <header>
-            <span id="time">03:42</span>
-            <span id="progress">0 / 0</span>
-        </header>
+        <h1>新聞配達</h1>
 
-        <section class="current">
+        <section class="block-section">
 
-            <div class="label">次の配達先</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ブロック</th>
+                        <th>軒数</th>
+                        <th id="newspaper1-header">信毎</th>
+                        <th id="newspaper2-header">須坂②</th>
+                    </tr>
+                </thead>
 
-            <div id="name" class="name">
-                読み込み中
-            </div>
-
-            <div id="items" class="items"></div>
-
-            <button id="complete">
-                投函完了 ✓
-            </button>
-
-        </section>
-
-        <section class="next">
-
-            <div class="label">次の5件</div>
-
-            <div id="nextList"></div>
+                <tbody id="block-list">
+                </tbody>
+            </table>
 
         </section>
+
+        <button id="start-button">
+            開始
+        </button>
 
     </main>
 
