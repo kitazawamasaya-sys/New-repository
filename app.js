@@ -37,60 +37,101 @@ const blockData = [
         block: "B",
         deliveries: [
             { place: "キティ",          newspaper1: 1, newspaper2: 0, note: "" },
+            { place: "左　白いドア",          newspaper1: 1, newspaper2: 0, note: "" },
+            { place: "右　車庫",          newspaper1: 1, newspaper2: 0, note: "" },
+            { place: "左",          newspaper1: 1, newspaper2: 0, note: "" },
+            { place: "左の右",          newspaper1: 1, newspaper2: 0, note: "" },
+            { place: "左の左",          newspaper1: 1, newspaper2: 1, note: "" },
+            { place: "鬱蒼",          newspaper1: 1, newspaper2: 0, note: "" },
+            { place: "白い家",          newspaper1: 1, newspaper2: 0, note: "" }
         ]
     },
     {
         block: "C",
         deliveries: [
-            { place: "右 猫",          newspaper1: 1, newspaper2: 0, note: "" }
+            { place: "右　四角",          newspaper1: 1, newspaper2: 0, note: "" },
+            { place: "左　作業場",          newspaper1: 1, newspaper2: 1, note: "農業" },
+            { place: "右　ハシゴ",          newspaper1: 1, newspaper2: 0, note: "" },
+            { place: "左　赤ポスト",          newspaper1: 1, newspaper2: 1, note: "" },
+            { place: "ハウス越えて",          newspaper1: 1, newspaper2: 1, note: "" },
+            { place: "信号手前",          newspaper1: 1, newspaper2: 1, note: "" }
         ]
     },
     {
         block: "D",
         deliveries: [
-            { place: "右 猫",          newspaper1: 1, newspaper2: 0, note: "" }
+            { place: "柿の木",          newspaper1: 1, newspaper2: 1, note: "" },
+            { place: "リコー",          newspaper1: 1, newspaper2: 1, note: "" },
+            { place: "さとう",          newspaper1: 1, newspaper2: 1, note: "" },
+            { place: "カラス",          newspaper1: 1, newspaper2: 1, note: "" },
+            { place: "フルーツ",          newspaper1: 1, newspaper2: 1, note: "農業" }
         ]
     },
     {
         block: "E",
         deliveries: [
-            { place: "右 猫",          newspaper1: 1, newspaper2: 0, note: "" }
+            { place: "右",          newspaper1: 1, newspaper2: 1, note: "" },
+            { place: "ラジオ",          newspaper1: 1, newspaper2: 0, note: "" },
+            { place: "赤ポスト",          newspaper1: 1, newspaper2: 0, note: "" },
+            { place: "難所",          newspaper1: 1, newspaper2: 0, note: "" },
+            { place: "左",          newspaper1: 1, newspaper2: 0, note: "" },
+            { place: "わらしべ",          newspaper1: 0, newspaper2: 1, note: "" }
         ]
     },
     {
         block: "F",
         deliveries: [
-            { place: "右 猫",          newspaper1: 1, newspaper2: 0, note: "" }
+            { place: "コヤマ",          newspaper1: 0, newspaper2: 0, note: "工業" },
+            { place: "角藤",          newspaper1: 0, newspaper2: 0, note: "経済" },
+            { place: "トヨタ",          newspaper1: 1, newspaper2: 0, note: "" },
+            { place: "ボディ",          newspaper1: 1, newspaper2: 1, note: "" },
+            { place: "鈴木",          newspaper1: 0, newspaper2: 0, note: "工業と経済" },
+            { place: "砂利の家",          newspaper1: 1, newspaper2: 0, note: "" }
         ]
     },
     {
         block: "G",
         deliveries: [
-            { place: "右 猫",          newspaper1: 1, newspaper2: 0, note: "" }
+            { place: "左　たけ",          newspaper1: 1, newspaper2: 0, note: "" },
+            { place: "左　つや",          newspaper1: 1, newspaper2: 1, note: "" },
+            { place: "右　奥",          newspaper1: 1, newspaper2: 1, note: "" },
+            { place: "のとなり",          newspaper1: 1, newspaper2: 1, note: "" },
+            { place: "青作業着",          newspaper1: 1, newspaper2: 1, note: "" }
         ]
     },
     {
         block: "H",
         deliveries: [
-            { place: "右 猫",          newspaper1: 1, newspaper2: 0, note: "" }
+            { place: "左　松",          newspaper1: 1, newspaper2: 0, note: "" },
+            { place: "右アーチ",          newspaper1: 1, newspaper2: 1, note: "" },
+            { place: "左　二世帯",          newspaper1: 1, newspaper2: 1, note: "" },
+            { place: "右",          newspaper1: 1, newspaper2: 1, note: "" }
         ]
     },
     {
         block: "I",
         deliveries: [
-            { place: "右 猫",          newspaper1: 1, newspaper2: 0, note: "" }
+            { place: "やすらぎ１",          newspaper1: 3, newspaper2: 1, note: "" },
+            { place: "やすらぎ２",          newspaper1: 5, newspaper2: 2, note: "" },
+            { place: "やすらぎ３",          newspaper1: 5, newspaper2: 1, note: "市民" },
+            { place: "日滝",          newspaper1: 1, newspaper2: 0, note: "" }
         ]
     },
     {
         block: "J",
         deliveries: [
-            { place: "右 猫",          newspaper1: 1, newspaper2: 0, note: "" }
+            { place: "ツッチー",          newspaper1: 1, newspaper2: 1, note: "" },
+           { place: "たなか",          newspaper1: 1, newspaper2: 1, note: "" },
+           { place: "青ピカピカ",          newspaper1: 1, newspaper2: 0, note: "" }
         ]
     },
     {
         block: "K",
         deliveries: [
-            { place: "右 猫",          newspaper1: 1, newspaper2: 0, note: "" }
+            { place: "左　反射板",          newspaper1: 1, newspaper2: 0, note: "" },
+            { place: "左　利根",          newspaper1: 1, newspaper2: 1, note: "" },
+            { place: "右",          newspaper1: 1, newspaper2: 0, note: "" },
+            { place: "右",          newspaper1: 1, newspaper2: 0, note: "" }
         ]
     }
 ];
