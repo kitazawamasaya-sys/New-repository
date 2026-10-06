@@ -99,3 +99,78 @@ td:nth-child(4) {
 #start-button:active {
     background: #333;
 }
+
+/* ==============================
+   ブロック画面
+   ============================== */
+
+.detail-table td {
+    font-size: 18px;
+    text-align: left;
+    padding: 8px;
+}
+
+/* 列幅: 場所 / 新聞① / 新聞② / 備考 */
+
+.detail-table td:nth-child(1) {
+    width: 31%;
+}
+
+.detail-table td:nth-child(2),
+.detail-table td:nth-child(3) {
+    width: 20%;
+}
+
+.detail-table td:nth-child(4) {
+    width: 29%;
+    font-size: 16px;
+}
+
+/* 新聞名（左）と部数（右）を同じセル内に確保 */
+
+.paper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.paper-count {
+    min-width: 1em;
+    text-align: right;
+    font-weight: bold;
+    color: #ffd54f;
+}
+
+.detail-table td.empty {
+    text-align: center;
+    color: #aaa;
+    padding: 30px 8px;
+}
+
+/* 前へ・次へ */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.nav-button {
+    width: 140px;
+    height: 60px;
+
+    background: #000;
+    color: #fff;
+
+    border: 2px solid #fff;
+    border-radius: 6px;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.nav-button:active {
+    background: #333;
+}
