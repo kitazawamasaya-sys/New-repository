@@ -1,55 +1,120 @@
-const deliveryData = [
-    { name: "田中 太郎", items: ["● 朝刊", "□ 日経"] },
-    { name: "山田 花子", items: ["● 朝刊"] },
-    { name: "佐藤 一郎", items: ["● 朝刊", "□ 日経"] },
-    { name: "鈴木 次郎", items: ["● 朝刊"] },
-    { name: "高橋 三郎", items: ["● 朝刊", "□ 日経"] },
-    { name: "伊藤 四郎", items: ["● 朝刊"] }
+// ==============================
+// 新聞名
+// ==============================
+
+const newspaper1 = "新聞①";
+const newspaper2 = "新聞②";
+
+
+// ==============================
+// ブロックごとの配達データ
+// ==============================
+
+const blockData = [
+    {
+        block: "A",
+        houses: 7,
+        newspaper1: 7,
+        newspaper2: 3
+    },
+    {
+        block: "B",
+        houses: 8,
+        newspaper1: 8,
+        newspaper2: 1
+    },
+    {
+        block: "C",
+        houses: 6,
+        newspaper1: 6,
+        newspaper2: 4
+    },
+    {
+        block: "D",
+        houses: 5,
+        newspaper1: 5,
+        newspaper2: 5
+    },
+    {
+        block: "E",
+        houses: 6,
+        newspaper1: 5,
+        newspaper2: 1
+    },
+    {
+        block: "F",
+        houses: 6,
+        newspaper1: 3,
+        newspaper2: 1
+    },
+    {
+        block: "G",
+        houses: 5,
+        newspaper1: 5,
+        newspaper2: 4
+    },
+    {
+        block: "H",
+        houses: 4,
+        newspaper1: 4,
+        newspaper2: 3
+    },
+    {
+        block: "I",
+        houses: 4,
+        newspaper1: 14,
+        newspaper2: 4
+    },
+    {
+        block: "J",
+        houses: 3,
+        newspaper1: 3,
+        newspaper2: 2
+    },
+    {
+        block: "K",
+        houses: 4,
+        newspaper1: 4,
+        newspaper2: 1
+    }
 ];
 
-let currentIndex = 0;
 
-function updateScreen() {
-    const current = deliveryData[currentIndex];
+// ==============================
+// 画面表示
+// ==============================
 
-    document.getElementById("name").textContent = current.name;
+document.getElementById("newspaper1-header").textContent =
+    newspaper1;
 
-    document.getElementById("items").innerHTML =
-        current.items.join("<br>");
+document.getElementById("newspaper2-header").textContent =
+    newspaper2;
 
-    document.getElementById("progress").textContent =
-        `${currentIndex + 1} / ${deliveryData.length}`;
 
-    const nextList = document.getElementById("nextList");
-    nextList.innerHTML = "";
+const blockList = document.getElementById("block-list");
 
-    for (
-        let i = currentIndex + 1;
-        i <= currentIndex + 5 && i < deliveryData.length;
-        i++
-    ) {
-        const item = document.createElement("div");
+blockData.forEach(data => {
 
-        item.className = "next-item";
+    const row = document.createElement("tr");
 
-        item.textContent =
-            `${deliveryData[i].name}　` +
-            deliveryData[i].items.join("");
+    row.innerHTML = `
+        <td>${data.block}</td>
+        <td>${data.houses}</td>
+        <td>${data.newspaper1}</td>
+        <td>${data.newspaper2}</td>
+    `;
 
-        nextList.appendChild(item);
-    }
-}
+    blockList.appendChild(row);
+});
 
-document
-    .getElementById("complete")
+
+// ==============================
+// 開始ボタン
+// ==============================
+
+document.getElementById("start-button")
     .addEventListener("click", () => {
 
-        if (currentIndex < deliveryData.length - 1) {
-            currentIndex++;
-            updateScreen();
-        } else {
-            alert("本日の配達完了！");
-        }
-    });
+        alert("開始します");
 
-updateScreen();
+    });
