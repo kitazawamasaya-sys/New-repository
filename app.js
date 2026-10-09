@@ -188,7 +188,6 @@ blockData.forEach(data => {
 
     row.innerHTML = `
         <td>${data.block}</td>
-        <td>${totals.houses}</td>
         <td>${totals.newspaper1}</td>
         <td>${totals.newspaper2}</td>
     `;
