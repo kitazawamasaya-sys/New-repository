@@ -58,7 +58,7 @@ tbody tr:nth-child(even) {
     background: #2a2a2a;
 }
 
-/* 列幅 */
+/* 列幅（一覧画面: ブロック / 新聞① / 新聞②） */
 
 th:nth-child(1),
 td:nth-child(1) {
@@ -92,8 +92,8 @@ td:nth-child(3) {
     border: 2px solid #fff;
     border-radius: 6px;
 
-    t-size: 24px;
-    t-weight: bold;
+    font-size: 24px;
+    font-weight: bold;
 
     cursor: pointer;
 }
@@ -107,7 +107,7 @@ td:nth-child(3) {
    ============================== */
 
 .detail-table td {
-    t-size: 15px;
+    font-size: 14px;
     text-align: left;
     padding: 6px 8px;
 }
@@ -125,7 +125,7 @@ td:nth-child(3) {
 
 .detail-table td:nth-child(4) {
     width: 29%;
-    t-size: 13px;
+    font-size: 13px;
 }
 
 /* 新聞名（左）と部数（右）を同じセル内に確保 */
@@ -139,7 +139,7 @@ td:nth-child(3) {
 .paper-count {
     min-width: 1em;
     text-align: right;
-    t-weight: bold;
+    font-weight: bold;
     color: #ffd54f;
 }
 
