@@ -23,7 +23,7 @@ const newspaper2 = "須坂";
 
 const blockData = [
     {
-        block: "A",
+        block: "縦１",
         deliveries: [
             { place: "右の家",         newspaper1: 1, newspaper2: 0, note: "" },
             { place: "左3軒 右の家",   newspaper1: 1, newspaper2: 1, note: "" },
@@ -35,7 +35,7 @@ const blockData = [
         ]
     },
     {
-        block: "B",
+        block: "左横",
         deliveries: [
             { place: "キティ",          newspaper1: 1, newspaper2: 0, note: "" },
             { place: "左　白いドア",          newspaper1: 1, newspaper2: 0, note: "" },
@@ -48,7 +48,7 @@ const blockData = [
         ]
     },
     {
-        block: "C",
+        block: "縦２",
         deliveries: [
             { place: "右　四角",          newspaper1: 1, newspaper2: 0, note: "" },
             { place: "左　作業場",          newspaper1: 1, newspaper2: 1, note: "農業" },
@@ -59,7 +59,7 @@ const blockData = [
         ]
     },
     {
-        block: "D",
+        block: "左横２",
         deliveries: [
             { place: "柿の木",          newspaper1: 1, newspaper2: 1, note: "" },
             { place: "リコー",          newspaper1: 1, newspaper2: 1, note: "" },
@@ -69,7 +69,7 @@ const blockData = [
         ]
     },
     {
-        block: "E",
+        block: "古川一族",
         deliveries: [
             { place: "右",          newspaper1: 1, newspaper2: 1, note: "" },
             { place: "ラジオ",          newspaper1: 1, newspaper2: 0, note: "" },
@@ -80,7 +80,7 @@ const blockData = [
         ]
     },
     {
-        block: "F",
+        block: "工業",
         deliveries: [
             { place: "コヤマ",          newspaper1: 0, newspaper2: 0, note: "工業" },
             { place: "角藤",          newspaper1: 0, newspaper2: 0, note: "経済" },
@@ -91,7 +91,7 @@ const blockData = [
         ]
     },
     {
-        block: "G",
+        block: "右横１",
         deliveries: [
             { place: "左　たけ",          newspaper1: 1, newspaper2: 0, note: "" },
             { place: "左　つや",          newspaper1: 1, newspaper2: 1, note: "" },
@@ -101,7 +101,7 @@ const blockData = [
         ]
     },
     {
-        block: "H",
+        block: "右横２",
         deliveries: [
             { place: "左　松",          newspaper1: 1, newspaper2: 0, note: "" },
             { place: "右アーチ",          newspaper1: 1, newspaper2: 1, note: "" },
@@ -110,7 +110,7 @@ const blockData = [
         ]
     },
     {
-        block: "I",
+        block: "やすらぎ",
         deliveries: [
             { place: "やすらぎ１",          newspaper1: 3, newspaper2: 1, note: "" },
             { place: "やすらぎ２",          newspaper1: 5, newspaper2: 2, note: "" },
@@ -119,7 +119,7 @@ const blockData = [
         ]
     },
     {
-        block: "J",
+        block: "３軒",
         deliveries: [
             { place: "ツッチー",          newspaper1: 1, newspaper2: 1, note: "" },
            { place: "たなか",          newspaper1: 1, newspaper2: 1, note: "" },
@@ -127,7 +127,7 @@ const blockData = [
         ]
     },
     {
-        block: "K",
+        block: "縦３",
         deliveries: [
             { place: "左　反射板",          newspaper1: 1, newspaper2: 0, note: "" },
             { place: "左　利根",          newspaper1: 1, newspaper2: 1, note: "" },
