@@ -162,7 +162,7 @@ function getTotals(data) {
     };
 }
 
-// 画面を移動する（"" ならインデックス、"A" ならAブロック）
+// 画面を移動する（"" ならインデックス、"縦１" なら縦１の画面）
 // URLの # 以降を書き換えるので、スマホの戻るボタンも使えます
 function go(id) {
     location.hash = id;
@@ -239,12 +239,12 @@ function showBlock(index) {
 
     indexView.hidden = true;
     blockView.hidden = false;
-    document.title = `${data.block}ブロック`;
+    document.title = data.block;
 
     blockView.replaceChildren();
 
     // タイトル
-    blockView.appendChild(el("h1", "", `${data.block}ブロック`));
+    blockView.appendChild(el("h1", "", data.block));
 
     // 配達先の表
     const table = el("table", "detail-table");
